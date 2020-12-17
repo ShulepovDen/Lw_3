@@ -443,12 +443,12 @@ a:-webkit-any-link {
   font-size: 18px;
   color: #0b132a;
 }
-.footer-list {
+.footer-engage-list {
   margin-top: 20px;
   padding: 0;
 }
 
-.footer-list__item {
+.footer-engage-list__item {
   margin-bottom: 10px;
   font-family: Rubik;
   font-style: normal;
@@ -459,7 +459,47 @@ a:-webkit-any-link {
   list-style-type: none;
   cursor: pointer;
 }
-.footer-list__item a {
+.footer-engage-list__item a {
+  text-decoration: none;
+  color: #4f5665;
+}
+.footer-earn-money-list {
+  margin-top: 20px;
+  padding: 0;
+}
+
+.footer-earn-money-list__item {
+  margin-bottom: 10px;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+  color: #4f5665;
+  list-style-type: none;
+  cursor: pointer;
+}
+.footer-earn-money-list__item a {
+  text-decoration: none;
+  color: #4f5665;
+}
+.footer-product-list {
+  margin-top: 20px;
+  padding: 0;
+}
+
+.footer-product-list__item {
+  margin-bottom: 10px;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+  color: #4f5665;
+  list-style-type: none;
+  cursor: pointer;
+}
+.footer-product-list__item a {
   text-decoration: none;
   color: #4f5665;
 }
