@@ -1,6 +1,5 @@
-window.onload = function() {
-
-  var listingElements = ['apple', 'orange'];
+window.onload = function () {
+  var listingElements = ["apple", "orange"];
   var storeElements = [];
 
   var isInAscending = true;
@@ -61,93 +60,132 @@ window.onload = function() {
   }
 
   function renameElement(element, newValue) {
-    var elementPosition = storeElements.indexOf(element);
-    if (elementPosition > -1) {
-      storeElements[elementPosition] = newValue;
-    }
-    elementPosition = listingElements.indexOf(element);
-    if (elementPosition > -1) {
-      listingElements[elementPosition] = newValue;
+    if (newValue.length === 0) {
+      if (confirm("You new sting is empty, is ok?")) {
+        var elementPosition = storeElements.indexOf(element);
+        if (elementPosition > -1) {
+          storeElements[elementPosition] = newValue;
+        }
+        elementPosition = listingElements.indexOf(element);
+        if (elementPosition > -1) {
+          listingElements[elementPosition] = newValue;
+        }
+      }
+    } else {
+      var elementPosition = storeElements.indexOf(element);
+      if (elementPosition > -1) {
+        storeElements[elementPosition] = newValue;
+      }
+      elementPosition = listingElements.indexOf(element);
+      if (elementPosition > -1) {
+        listingElements[elementPosition] = newValue;
+      }
     }
   }
 
   // updateUI берет данные из массивов и занимается вставкой
   function updateUI() {
-    var storeSelect = document.querySelector('.store-select');
-    var listingSelect = document.querySelector('.listing-select');
-    storeSelect.innerHTML = '';
-    listingSelect.innerHTML = '';
+    var storeSelect = document.querySelector(".store-select");
+    var listingSelect = document.querySelector(".listing-select");
+    storeSelect.innerHTML = "";
+    listingSelect.innerHTML = "";
 
     for (var i = 0; i < listingElements.length; i++) {
-      var newOption = document.createElement('option');
+      var newOption = document.createElement("option");
       newOption.innerText = listingElements[i];
       listingSelect.append(newOption);
     }
 
     for (var i = 0; i < storeElements.length; i++) {
-      var newOption = document.createElement('option');
+      var newOption = document.createElement("option");
       newOption.innerText = storeElements[i];
       storeSelect.append(newOption);
     }
   }
 
   // регистрируем события
-  var addStoreButton = document.querySelector('#add-store-button');
+  var addStoreButton = document.querySelector("#add-store-button");
 
-  addStoreButton.onclick = function() {
-    var selectedOption = document.querySelector('.listing-select option:checked');
-    addToStoreElements(selectedOption.innerText);
+  addStoreButton.onclick = function () {
+    var selectedOption = document.querySelector(
+      ".listing-select option:checked"
+    );
+    if (selectedOption !== null) {
+      addToStoreElements(selectedOption.innerText);
+    }
     updateUI();
-  }
+  };
 
-  var addListingButton = document.querySelector('#add-listing-button');
+  var addListingButton = document.querySelector("#add-listing-button");
 
-  addListingButton.onclick = function() {
-    var selectedOption = document.querySelector('.store-select option:checked');
-    addToListingElements(selectedOption.innerText);
+  addListingButton.onclick = function () {
+    var selectedOption = document.querySelector(".store-select option:checked");
+    if (selectedOption !== null) {
+      addToListingElements(selectedOption.innerText);
+    }
     updateUI();
-  }
+  };
 
-  var deleteButton = document.querySelector('#delete-button');
+  var deleteButton = document.querySelector("#delete-button");
 
-  deleteButton.onclick = function() {
-    var selectedOption = document.querySelector('.store-select option:checked');
+  deleteButton.onclick = function () {
+    var selectedOption = document.querySelector(".store-select option:checked");
     if (selectedOption !== null) {
       deleteFromElements(storeElements, selectedOption.innerText);
     } else {
-      selectedOption = document.querySelector('.listing-select option:checked');
-      deleteFromElements(listingElements, selectedOption.innerText);
+      selectedOption = document.querySelector(".listing-select option:checked");
+      if (selectedOption !== null) {
+        deleteFromElements(listingElements, selectedOption.innerText);
+      }
     }
     updateUI();
-  }
+  };
 
-  var newElementButton = document.querySelector('#new-element-button');
+  var newElementButton = document.querySelector("#new-element-button");
 
-  newElementButton.onclick = function() {
+  newElementButton.onclick = function () {
     var newElement = prompt("Adding new element");
-    var result = newAddToListingElements(newElement);
-    if (result === -1) {
-      alert("This element already exists");
+    if (newElement !== null) {
+      if (newElement.length === 0) {
+        if (confirm("You string is empty, is ok?")) {
+          var result = newAddToListingElements(newElement);
+          if (result === -1) {
+            alert("This element already exists");
+          }
+        }
+      } else {
+        var result = newAddToListingElements(newElement);
+        if (result === -1) {
+          alert("This element already exists");
+        }
+      }
+      updateUI();
     }
-    updateUI();
-  }
+  };
 
-  var sortButton = document.querySelector('#sort-button');
+  var sortButton = document.querySelector("#sort-button");
 
-  sortButton.onclick = function() {
+  sortButton.onclick = function () {
     sortElements();
     updateUI();
-  }
+  };
 
-  var renameButton = document.querySelector('#rename-button');
+  var renameButton = document.querySelector("#rename-button");
 
-  renameButton.onclick = function() {
-    var selectedOption = document.querySelector('.store-select option:checked');
+  renameButton.onclick = function () {
+    var selectedOption = document.querySelector(".store-select option:checked");
     if (selectedOption === null) {
-      selectedOption = document.querySelector('.listing-select option:checked');
+      selectedOption = document.querySelector(".listing-select option:checked");
     }
-    var newValue = prompt("Rename old element");
-    renameElement(selectedOption.innerText, newValue);
+    if (selectedOption !== null) {
+      var newValue = prompt(
+        "Rename old element<" + selectedOption.innerText + ">"
+      );
+      if (newValue !== null) {
+        renameElement(selectedOption.innerText, newValue);
+      }
+    }
+
     updateUI();
-  }
+  };
 };

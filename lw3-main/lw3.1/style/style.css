@@ -1,12 +1,12 @@
 @font-face {
-  font-family: 'Rubik';
-  src: url('../fonts/Rubik-VariableFont_wght.ttf');
+  font-family: "Rubik";
+  src: url("../fonts/Rubik-VariableFont_wght.ttf");
 }
 
 body {
   width: 1440px;
   margin-left: auto;
-    margin-right: auto;
+  margin-right: auto;
 }
 
 .header {
@@ -32,7 +32,7 @@ body {
   line-height: 24px;
   margin-top: 6.12px;
   margin-left: 10px;
-  color: #0B132A
+  color: #0b132a;
 }
 
 .header-menu {
@@ -56,9 +56,9 @@ body {
   text-decoration: none;
 }
 a:-webkit-any-link {
-    color: -webkit-link;
-    cursor: pointer;
-    color: #4F5665;
+  color: -webkit-link;
+  cursor: pointer;
+  color: #4f5665;
 }
 .header-menu__item:hover {
   cursor: pointer;
@@ -82,7 +82,7 @@ a:-webkit-any-link {
 }
 
 .header-account-menu__item:last-child:hover {
-  background: #F53855;
+  background: #f53855;
   color: #fff;
   transition-duration: 0.5s;
 }
@@ -91,28 +91,28 @@ a:-webkit-any-link {
   margin-left: 30px;
   margin-top: 0px;
   padding: 13px 45px;
-  border: 1px solid #F53855;
+  border: 1px solid #f53855;
   border-radius: 50px;
   transition-duration: 0.5s;
 }
 
 .header-account-menu__item--color_red {
-  color: #F53855;
+  color: #f53855;
 }
 
-.main-title {
+.hero {
   display: flex;
   flex-direction: row;
   margin-left: 150px;
   margin-top: 3.84px;
 }
 
-.main-title-text {
+.hero-left {
   width: 555px;
   margin-top: 116px;
 }
 
-.main-title-text__header {
+.hero-left__header {
   font-family: Rubik;
   font-style: normal;
   font-weight: 700;
@@ -120,7 +120,7 @@ a:-webkit-any-link {
   line-height: 70px;
 }
 
-.main-title-text__slogan {
+.hero-left__slogan {
   font-family: Rubik;
   font-style: normal;
   font-weight: normal;
@@ -129,18 +129,18 @@ a:-webkit-any-link {
   margin-top: 20px;
 }
 
-.main-title-text__btn {
+.hero-left__btn {
   width: 250px;
   height: 60px;
   margin-top: 50px;
-  background: #F53838;
+  background: #f53838;
   border-radius: 10px;
   font-family: Rubik;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
   line-height: 25px;
-  color: #FFFFFF;
+  color: #ffffff;
   display: flex;
   flex-flow: wrap;
   align-content: center;
@@ -149,7 +149,7 @@ a:-webkit-any-link {
   transition-duration: 0.5s;
 }
 
-.main-title-text__btn:hover {
+.hero-left__btn:hover {
   cursor: pointer;
   box-shadow: none;
   transition-duration: 0.5s;
@@ -175,7 +175,7 @@ a:-webkit-any-link {
   align-content: center;
   width: 429px;
   height: 125.57px;
-  border-right: 2px solid #EEEFF2;
+  border-right: 2px solid #eeeff2;
 }
 
 .company-info-item:first-child {
@@ -190,7 +190,7 @@ a:-webkit-any-link {
 .company-info-item__img {
   height: 55px;
   width: 55px;
-  background: #FFECEC;
+  background: #ffecec;
   border-radius: 70px;
   display: flex;
   flex-flow: wrap;
@@ -226,7 +226,7 @@ a:-webkit-any-link {
   font-size: 35px;
   line-height: 50px;
   text-align: center;
-  color: #0B132A;
+  color: #0b132a;
   margin-top: 133.5px;
 }
 
@@ -237,7 +237,7 @@ a:-webkit-any-link {
   font-size: 16px;
   line-height: 30px;
   text-align: center;
-  color: #4F5665;
+  color: #4f5665;
   width: 555px;
   margin: 0 auto;
   margin-top: 20px;
@@ -257,7 +257,7 @@ a:-webkit-any-link {
 .plan-menu-item {
   width: 330px;
   height: 760px;
-  border: 2px solid #DDDDDD;
+  border: 2px solid #dddddd;
   border-radius: 10px;
   margin-right: 50px;
   display: flex;
@@ -266,7 +266,7 @@ a:-webkit-any-link {
 }
 
 .plan-menu-item:hover {
-  border: 2px solid #F53838;
+  border: 2px solid #f53838;
   transition-duration: 0.5s;
 }
 
@@ -287,7 +287,7 @@ a:-webkit-any-link {
   font-size: 18px;
   line-height: 30px;
   text-align: center;
-  color: #0B132A;
+  color: #0b132a;
 }
 
 .plan-menu-item-list {
@@ -315,7 +315,7 @@ a:-webkit-any-link {
   font-weight: normal;
   font-size: 14px;
   line-height: 30px;
-  color: #4F5665;
+  color: #4f5665;
 }
 
 .plan-menu-item__price {
@@ -327,7 +327,7 @@ a:-webkit-any-link {
   font-size: 25px;
   line-height: 30px;
   text-align: center;
-  color: #0B132A;
+  color: #0b132a;
 }
 
 .plan-menu-item__btn {
@@ -335,7 +335,7 @@ a:-webkit-any-link {
   margin-top: 20px;
   width: 177.88px;
   height: 45px;
-  border: 2px solid #F53838;
+  border: 2px solid #f53838;
   border-radius: 50px;
   display: flex;
   flex-flow: wrap;
@@ -346,14 +346,14 @@ a:-webkit-any-link {
   font-weight: bold;
   font-size: 16px;
   line-height: 19px;
-  color: #F53838;
+  color: #f53838;
   transition-duration: 0.5s;
   cursor: pointer;
 }
 
-.plan-menu-item:hover>.plan-menu-item__btn {
-  background: #F53838;
-  color: #FFFFFF;
+.plan-menu-item:hover > .plan-menu-item__btn {
+  background: #f53838;
+  color: #ffffff;
   transition-duration: 0.5s;
 }
 
@@ -364,7 +364,7 @@ a:-webkit-any-link {
   flex-direction: row;
 }
 
-.footer-company-info-logo {
+.footer-company-info__logo {
   margin-top: 6.12px;
   height: 36.23px;
   display: flex;
@@ -377,7 +377,7 @@ a:-webkit-any-link {
   font-weight: 500;
   font-size: 16px;
   line-height: 30px;
-  color: #4F5665;
+  color: #4f5665;
   margin-top: 20px;
   width: 340px;
 }
@@ -389,7 +389,7 @@ a:-webkit-any-link {
 }
 
 .dot {
-  background: #F53838;
+  background: #f53838;
   height: 33.6px;
   width: 33.6px;
   border-radius: 70%;
@@ -406,7 +406,7 @@ a:-webkit-any-link {
   font-weight: normal;
   font-size: 16px;
   line-height: 30px;
-  color: #AFB5C0;
+  color: #afb5c0;
   margin-top: 30px;
 }
 
@@ -422,31 +422,44 @@ a:-webkit-any-link {
   margin-left: 126px;
 }
 
-.footer-list__header {
+.footer-product__header {
   font-family: Rubik;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
-  color: #0B132A;
+  color: #0b132a;
 }
-
+.footer-earn-money__header {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  color: #0b132a;
+}
+.footer-engage__header {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  color: #0b132a;
+}
 .footer-list {
   margin-top: 20px;
   padding: 0;
 }
 
-.footer-list-item {
+.footer-list__item {
   margin-bottom: 10px;
   font-family: Rubik;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 30px;
-  color: #4F5665;
+  color: #4f5665;
   list-style-type: none;
   cursor: pointer;
 }
-.footer-list-item a{
+.footer-list__item a {
   text-decoration: none;
   color: #4f5665;
 }
